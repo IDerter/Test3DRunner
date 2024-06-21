@@ -1,0 +1,4 @@
+#Fri Jun 21 17:58:13 MSK 2024
+base.0=C\:\\Users\\Danila\\Documents\\GitHub\\Test3DRunner\\3D Runner Test\\Library\\Bee\\Android\\Prj\\Mono2x\\Gradle\\launcher\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
