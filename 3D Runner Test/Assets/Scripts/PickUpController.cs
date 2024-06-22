@@ -26,7 +26,6 @@ namespace ButchersGames
             base.Awake();
             _score = _startValueScore;
         }
-
         void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.CompareTag("Dollar"))

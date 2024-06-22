@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9111734240536011895}
   - component: {fileID: 9111734240536011894}
+  - component: {fileID: 1340756878}
   m_Layer: 0
   m_Name: Bottle
   m_TagString: Bottle
@@ -47,6 +48,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.19754206, y: 0.6578995, z: 0.19754204}
   m_Center: {x: -0.00000009685755, y: 0.27591634, z: -0.00000031664968}
+--- !u!114 &1340756878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9111734240536011888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 388d208a42c0c544281c84dec7f4b28b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  punchAmount: 1.05
+  duration: 0.5
+  vibrato: 1
+  elasticity: 1
+  _bottleParticleSystem: {fileID: 231679563404333856, guid: 4fef61bbcf9533e4e8adc0a099dadbf3, type: 3}
+  _parentSpawn: {fileID: 0}
 --- !u!1 &9111734242080702149
 GameObject:
   m_ObjectHideFlags: 0

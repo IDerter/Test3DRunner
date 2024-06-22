@@ -6,6 +6,7 @@ namespace ButchersGames
 {
     public enum TypeDollarsOwner
     {
+        bum,
         poor,
         medium,
         rich
@@ -15,15 +16,19 @@ namespace ButchersGames
     {
         private const string _changeSkin = "ChangeSkin";
 
+        [SerializeField] private Animator _animPlayer;
         [SerializeField] private Transform _moneyContainer;
         [SerializeField] private float _allDollarsCount;
         [SerializeField] private float _costAllDollars;
         public float GetCostAllDollars => _costAllDollars;
+
+        [SerializeField] private GameObject _bumSkin;
         [SerializeField] private GameObject _poorSkin;
         [SerializeField] private GameObject _mediumSkin;
         [SerializeField] private GameObject _richSkin;
         [SerializeField] private TypeDollarsOwner _type;
         private int _costDollar = 2;
+        [SerializeField] private TypeDollarsOwner _prevType = TypeDollarsOwner.poor;
         public TypeDollarsOwner TypeDollarOwner { get { return _type; } set { _type = value; } }
 
         protected override void Awake()
@@ -36,21 +41,53 @@ namespace ButchersGames
 
         public void ChangeSkin()
         {
+            if (_type == TypeDollarsOwner.bum)
+            {
+                if (_prevType != _type)
+                {
+                    _poorSkin.SetActive(true);
+                    _mediumSkin.SetActive(false);
+                    if (PlayerMovement.Instance.Play)
+                        _animPlayer.SetTrigger("bumWalking");
+                }
+                _prevType = TypeDollarsOwner.bum;
+            }
+
             if (_type == TypeDollarsOwner.poor)
             {
-                _poorSkin.SetActive(true);
-                _mediumSkin.SetActive(false);
+                if (_prevType != _type)
+                {
+                    _poorSkin.SetActive(true);
+                    _mediumSkin.SetActive(false);
+                    if (PlayerMovement.Instance.Play)
+                        _animPlayer.SetTrigger("spin");
+                }
+                _prevType = TypeDollarsOwner.poor;
             }
+
             if (_type == TypeDollarsOwner.medium)
             {
-                _poorSkin.SetActive(false);
-                _mediumSkin.SetActive(true);
-                _richSkin.SetActive(false);
+                if (_prevType != _type)
+                {
+                    _poorSkin.SetActive(false);
+                    _mediumSkin.SetActive(true);
+                    _richSkin.SetActive(false);
+                    if (PlayerMovement.Instance.Play)
+                        _animPlayer.SetTrigger("spin");
+                }
+                _prevType = TypeDollarsOwner.medium;
             }
+
             if (_type == TypeDollarsOwner.rich)
             {
-                _richSkin.SetActive(true);
-                _mediumSkin.SetActive(false);
+                if (_prevType != _type)
+                {
+                    _richSkin.SetActive(true);
+                    _mediumSkin.SetActive(false);
+                    if (PlayerMovement.Instance.Play)
+                        _animPlayer.SetTrigger("spin");
+                }
+                _prevType = TypeDollarsOwner.rich;
             }
         }
     }

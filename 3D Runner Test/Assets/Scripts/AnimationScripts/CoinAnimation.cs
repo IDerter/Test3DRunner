@@ -34,6 +34,8 @@ namespace ButchersGames
 
             for (int i = 0; i < _pileOfCoinParent.transform.childCount; i++)
             {
+                _pileOfCoinParent.transform.GetChild(i).gameObject.SetActive(true);
+
                 _pileOfCoinParent.transform.GetChild(i).DOScale(1f, 0.3f).SetDelay(delay).SetEase(Ease.OutBack);
 
                 _pileOfCoinParent.transform.GetChild(i).GetComponent<RectTransform>().DOMove(_moveToObject.position, 0.8f).SetDelay(delay + 0.5f).SetEase(Ease.InBack);

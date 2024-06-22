@@ -392,6 +392,7 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Matthew Guz/Hits Effects FREE/Scene Demo/Script/Prefab Manager.cs"
 "Assets/PathCreator/Examples/Scripts/GeneratePathExample.cs"
 "Assets/PathCreator/Examples/Scripts/PathFollower.cs"
 "Assets/PathCreator/Examples/Scripts/PathPlacer.cs"
@@ -405,7 +406,10 @@
 "Assets/Scripts/Audio/Sound.cs"
 "Assets/Scripts/Audio/SoundParameters.cs"
 "Assets/Scripts/Audio/VolumeValue.cs"
+"Assets/Scripts/BottleExplosion.cs"
 "Assets/Scripts/CameraHolder.cs"
+"Assets/Scripts/Destroyer.cs"
+"Assets/Scripts/DollarExplosion.cs"
 "Assets/Scripts/Doors.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/GameSO.cs"
@@ -418,6 +422,7 @@
 "Assets/Scripts/SimpleTimer.cs"
 "Assets/Scripts/SingletonBase.cs"
 "Assets/Scripts/SkinsChanger.cs"
+"Assets/Scripts/StarFlashAnim.cs"
 -langversion:9.0
 
 /deterministic

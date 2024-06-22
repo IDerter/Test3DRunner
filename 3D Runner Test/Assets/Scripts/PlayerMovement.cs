@@ -26,11 +26,6 @@ namespace ButchersGames
             _isMobile = Application.isMobilePlatform;
         }
 
-        public void InActivePlayer()
-        {
-            _playerTransform.gameObject.SetActive(false);
-        }
-
         private void Update()
         {
             if (_isPlay)

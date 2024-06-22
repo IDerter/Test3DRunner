@@ -29,8 +29,8 @@ namespace ButchersGames
         public void OpenDoors()
         {
             _doorLeft.DOLocalRotate(new Vector3(0, -90, 0), _time, RotateMode.FastBeyond360).SetRelative(true).SetEase(Ease.Linear);
-            _doorRight.DOLocalRotate(new Vector3(0, 90, 0), _time, RotateMode.FastBeyond360).SetRelative(true).SetEase(Ease.Linear);
-            Destroy(gameObject);
+            _doorRight.DOLocalRotate(new Vector3(0, 90, 0), _time, RotateMode.FastBeyond360).SetRelative(true).SetEase(Ease.Linear).OnComplete(
+                () => Destroy(gameObject)); 
         }
     }
 }

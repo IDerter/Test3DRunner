@@ -34,6 +34,11 @@ namespace ButchersGames
         [SerializeField] private GameSO _gameSO;
         [SerializeField] private TextMeshProUGUI _textAboveSlider;
 
+        [SerializeField] private float punchAmount = 1.05f; // Величина увеличения
+        [SerializeField] private float duration = 0.5f; // Продолжительность анимации
+        [SerializeField] private int vibrato = 5; // Количество вибраций
+        [SerializeField] private float elasticity = 1f; // Эластичность
+
         private void Update()
         {
             if (_sliderImage.fillAmount != _displayedScore / SkinsChanger.Instance.GetCostAllDollars)
@@ -44,6 +49,7 @@ namespace ButchersGames
         {
             _displayedScore = PickUpController.Instance.GetScore;
             _currentScore = _displayedScore;
+            _sliderImage.fillAmount = Mathf.Lerp(_sliderImage.fillAmount, _displayedScore / SkinsChanger.Instance.GetCostAllDollars, Time.deltaTime * 3);
 
             SetSliderColor();
 
@@ -100,6 +106,9 @@ namespace ButchersGames
             _scoreToAddTextMinus.DOColor(new Color(_scoreToAddTextMinus.color.r, _scoreToAddTextMinus.color.g, _scoreToAddTextMinus.color.b, 1), 1);
             _redDollarImage.DOColor(new Color(_redDollarImage.color.r, _redDollarImage.color.g, _redDollarImage.color.b, 0), 1);
 
+            _scoreToAddTextMinus.rectTransform.DOPunchScale(new Vector3(punchAmount, punchAmount, punchAmount), duration, vibrato, elasticity).SetUpdate(true).
+                OnComplete(() => _scoreToAddTextMinus.rectTransform.DOScale(new Vector3(1, 1, 1), duration));
+
             _scoreToAddAllMinus += scoreToAdd;
 
             StartCoroutine(UpdateScoreRoutineMinus());
@@ -115,6 +124,8 @@ namespace ButchersGames
 
             _scoreToAddTextPlus.DOColor(new Color(_scoreToAddTextPlus.color.r, _scoreToAddTextPlus.color.g, _scoreToAddTextPlus.color.b, 1), 1);
             _greenDollarImage.DOColor(new Color(_greenDollarImage.color.r, _greenDollarImage.color.g, _greenDollarImage.color.b, 0), 1);
+            _scoreToAddTextPlus.rectTransform.DOPunchScale(new Vector3(punchAmount, punchAmount, punchAmount), duration, vibrato, elasticity).SetUpdate(true).
+                OnComplete(() => _scoreToAddTextPlus.rectTransform.DOScale(new Vector3(1,1,1), duration));
 
             _scoreToAddAllPlus += scoreToAdd;
 
@@ -154,7 +165,15 @@ namespace ButchersGames
 
         private void SetSliderColor()
         {
-            if (_sliderImage.fillAmount < 0.5)
+            if ( _sliderImage.fillAmount <= 0.2)
+            {
+                _sliderImage.color = Color.red;
+                SkinsChanger.Instance.TypeDollarOwner = TypeDollarsOwner.bum;
+                SkinsChanger.Instance.ChangeSkin();
+                _textAboveSlider.text = _gameSO.BumString;
+            }
+
+            if (_sliderImage.fillAmount < 0.5 && _sliderImage.fillAmount > 0.2)
             {
                 _sliderImage.color = Color.red;
                 SkinsChanger.Instance.TypeDollarOwner = TypeDollarsOwner.poor;

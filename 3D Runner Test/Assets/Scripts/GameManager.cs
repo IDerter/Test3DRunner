@@ -32,7 +32,7 @@ namespace ButchersGames
 
         public void OnFinishGame()
         {
-            if (Instance.XMultiplier == ((int)SkinsChanger.Instance.TypeDollarOwner + 2))
+            if (Instance.XMultiplier == ((int)SkinsChanger.Instance.TypeDollarOwner + 1))
             {
                 _resultUI.CalculateDollarsMultiplier();
                 PlayerMovement.Instance.Play = false;
@@ -70,7 +70,7 @@ namespace ButchersGames
             _pathFollower.IsGame = false;
             _uiLosePanel.SetActive(true);
             _canvasSlider.SetActive(false);
-            PlayerMovement.Instance.InActivePlayer();
+            _animatorPlayer.SetTrigger("crying");
 
             AudioManager.Instance.StopSound(_audioFootStep);
         }

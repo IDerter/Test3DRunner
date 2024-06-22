@@ -7,6 +7,9 @@ namespace ButchersGames
     [CreateAssetMenu()]
     public class GameSO : ScriptableObject
     {
+        [SerializeField] private string _bum = "Бомж";
+        public string BumString => _bum;
+
         [SerializeField] private string _poor = "Бедный";
         public string PoorString => _poor;
         [SerializeField] private string _medium = "Состоятельный";

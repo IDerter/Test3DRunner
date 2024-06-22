@@ -2,8 +2,11 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - ButchersGames.AudioManager
+    - ButchersGames.BottleExplosion
     - ButchersGames.CameraHolder
     - ButchersGames.CoinAnimation
+    - ButchersGames.Destroyer
+    - ButchersGames.DollarExplosion
     - ButchersGames.Doors
     - ButchersGames.GameManager
     - ButchersGames.GameSO
@@ -16,13 +19,12 @@ ScriptsOnlyBuild:
     - ButchersGames.ScoreUI
     - ButchersGames.SimpleTimer
     - ButchersGames.SkinsChanger
+    - ButchersGames.StarFlashAnim
     - PathCreation.Examples.PathFollower
     - PathCreation.Examples.RoadMeshCreator
     - QuizCinema.LevelMapButtonController
     DOTween.dll:
     - DG.Tweening.Core.DOTweenSettings
-    NaughtyAttributes.Editor.dll:
-    - NaughtyAttributes.Editor.NaughtyInspector
     PathCreator.dll:
     - PathCreation.PathCreator
     Unity.RenderPipelines.Core.Runtime.dll:
@@ -74,6 +76,14 @@ ScriptsOnlyBuild:
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshPro
     - TMPro.TextMeshProUGUI
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -155,16 +165,16 @@ ScriptsOnlyBuild:
   methodsToPreserve:
   - assembly: Assembly-CSharp
     fullTypeName: QuizCinema.LevelMapButtonController
-    methodName: LoadSceneByName
+    methodName: Quit
   - assembly: Assembly-CSharp
     fullTypeName: QuizCinema.LevelMapButtonController
     methodName: ReloadScene
   - assembly: Assembly-CSharp
+    fullTypeName: QuizCinema.LevelMapButtonController
+    methodName: LoadSceneByName
+  - assembly: Assembly-CSharp
     fullTypeName: ButchersGames.MoneyGet
     methodName: MoneyDisplay
-  - assembly: Assembly-CSharp
-    fullTypeName: QuizCinema.LevelMapButtonController
-    methodName: Quit
   - assembly: Assembly-CSharp
     fullTypeName: QuizCinema.LevelMapButtonController
     methodName: ReloadScene
@@ -203,16 +213,16 @@ ScriptsOnlyBuild:
     methodName: ResetDebugManager
   - assembly: Assembly-CSharp
     fullTypeName: QuizCinema.LevelMapButtonController
-    methodName: LoadSceneByName
+    methodName: Quit
   - assembly: Assembly-CSharp
     fullTypeName: QuizCinema.LevelMapButtonController
     methodName: ReloadScene
   - assembly: Assembly-CSharp
+    fullTypeName: QuizCinema.LevelMapButtonController
+    methodName: LoadSceneByName
+  - assembly: Assembly-CSharp
     fullTypeName: ButchersGames.MoneyGet
     methodName: MoneyDisplay
-  - assembly: Assembly-CSharp
-    fullTypeName: QuizCinema.LevelMapButtonController
-    methodName: Quit
   - assembly: Assembly-CSharp
     fullTypeName: QuizCinema.LevelMapButtonController
     methodName: ReloadScene
@@ -319,93 +329,101 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5676}
     - Class: 114
-      Script: {instanceID: 5850}
+      Script: {instanceID: 5848}
     - Class: 114
-      Script: {instanceID: 6064}
+      Script: {instanceID: 6062}
     - Class: 114
-      Script: {instanceID: 6182}
+      Script: {instanceID: 6180}
     - Class: 114
-      Script: {instanceID: 6236}
+      Script: {instanceID: 6234}
     - Class: 114
-      Script: {instanceID: 6354}
+      Script: {instanceID: 6352}
     - Class: 114
-      Script: {instanceID: 6512}
+      Script: {instanceID: 6510}
     - Class: 114
-      Script: {instanceID: 6598}
+      Script: {instanceID: 6596}
     - Class: 114
-      Script: {instanceID: 6774}
+      Script: {instanceID: 6772}
     - Class: 114
-      Script: {instanceID: 6840}
+      Script: {instanceID: 6838}
     - Class: 114
-      Script: {instanceID: 7270}
+      Script: {instanceID: 7268}
     - Class: 114
-      Script: {instanceID: 7594}
+      Script: {instanceID: 7592}
     - Class: 114
-      Script: {instanceID: 7624}
+      Script: {instanceID: 7622}
     - Class: 114
-      Script: {instanceID: 7726}
+      Script: {instanceID: 7724}
     - Class: 114
-      Script: {instanceID: 7740}
+      Script: {instanceID: 7738}
     - Class: 114
-      Script: {instanceID: 8060}
+      Script: {instanceID: 8058}
     - Class: 114
-      Script: {instanceID: 8064}
+      Script: {instanceID: 8062}
     - Class: 114
-      Script: {instanceID: 8088}
+      Script: {instanceID: 8086}
     - Class: 114
-      Script: {instanceID: 8518}
+      Script: {instanceID: 8516}
     - Class: 114
-      Script: {instanceID: 8550}
+      Script: {instanceID: 8548}
     - Class: 114
-      Script: {instanceID: 8730}
+      Script: {instanceID: 8728}
     - Class: 114
-      Script: {instanceID: 8822}
+      Script: {instanceID: 8820}
     - Class: 114
-      Script: {instanceID: 8888}
+      Script: {instanceID: 8886}
     - Class: 114
-      Script: {instanceID: 8960}
+      Script: {instanceID: 8958}
     - Class: 114
-      Script: {instanceID: 8978}
+      Script: {instanceID: 8976}
     - Class: 114
-      Script: {instanceID: 9098}
+      Script: {instanceID: 9096}
     - Class: 114
-      Script: {instanceID: 9106}
+      Script: {instanceID: 9104}
     - Class: 114
-      Script: {instanceID: 9286}
+      Script: {instanceID: 9284}
     - Class: 114
-      Script: {instanceID: 9330}
+      Script: {instanceID: 9328}
     - Class: 114
-      Script: {instanceID: 9340}
+      Script: {instanceID: 9338}
     - Class: 114
-      Script: {instanceID: 9420}
+      Script: {instanceID: 9418}
     - Class: 114
-      Script: {instanceID: 9534}
+      Script: {instanceID: 9532}
     - Class: 114
-      Script: {instanceID: 9552}
+      Script: {instanceID: 9550}
     - Class: 114
-      Script: {instanceID: 9716}
+      Script: {instanceID: 9714}
     - Class: 114
-      Script: {instanceID: 9930}
+      Script: {instanceID: 9928}
     - Class: 114
-      Script: {instanceID: 10122}
+      Script: {instanceID: 10120}
     - Class: 114
-      Script: {instanceID: 10702}
+      Script: {instanceID: 10696}
     - Class: 114
-      Script: {instanceID: 11168}
+      Script: {instanceID: 11162}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11164}
     - Class: 114
-      Script: {instanceID: 11244}
+      Script: {instanceID: 11238}
     - Class: 114
-      Script: {instanceID: 11258}
+      Script: {instanceID: 11252}
     - Class: 114
-      Script: {instanceID: 11742}
+      Script: {instanceID: 11734}
     - Class: 114
-      Script: {instanceID: 12046}
+      Script: {instanceID: 12038}
     - Class: 114
-      Script: {instanceID: 12176}
+      Script: {instanceID: 12168}
     - Class: 114
-      Script: {instanceID: 12394}
+      Script: {instanceID: 12384}
+    - Class: 114
+      Script: {instanceID: 158814}
+    - Class: 114
+      Script: {instanceID: 333046}
+    - Class: 114
+      Script: {instanceID: 390514}
+    - Class: 114
+      Script: {instanceID: 684024}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -415,6 +433,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
@@ -506,43 +528,51 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5676}
     - Class: 114
-      Script: {instanceID: 6182}
+      Script: {instanceID: 6180}
     - Class: 114
-      Script: {instanceID: 6236}
+      Script: {instanceID: 6234}
     - Class: 114
-      Script: {instanceID: 6598}
+      Script: {instanceID: 6596}
     - Class: 114
-      Script: {instanceID: 6774}
+      Script: {instanceID: 6772}
     - Class: 114
-      Script: {instanceID: 6840}
+      Script: {instanceID: 6838}
     - Class: 114
-      Script: {instanceID: 7270}
+      Script: {instanceID: 7268}
     - Class: 114
-      Script: {instanceID: 7726}
+      Script: {instanceID: 7724}
     - Class: 114
-      Script: {instanceID: 8550}
+      Script: {instanceID: 8548}
     - Class: 114
-      Script: {instanceID: 8730}
+      Script: {instanceID: 8728}
     - Class: 114
-      Script: {instanceID: 8822}
+      Script: {instanceID: 8820}
     - Class: 114
-      Script: {instanceID: 8888}
+      Script: {instanceID: 8886}
     - Class: 114
-      Script: {instanceID: 8978}
+      Script: {instanceID: 8976}
     - Class: 114
-      Script: {instanceID: 9330}
+      Script: {instanceID: 9328}
     - Class: 114
-      Script: {instanceID: 9534}
+      Script: {instanceID: 9532}
     - Class: 114
-      Script: {instanceID: 11168}
+      Script: {instanceID: 11162}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11164}
     - Class: 114
-      Script: {instanceID: 11244}
+      Script: {instanceID: 11238}
     - Class: 114
-      Script: {instanceID: 12046}
+      Script: {instanceID: 12038}
     - Class: 114
-      Script: {instanceID: 12394}
+      Script: {instanceID: 12384}
+    - Class: 114
+      Script: {instanceID: 158814}
+    - Class: 114
+      Script: {instanceID: 333046}
+    - Class: 114
+      Script: {instanceID: 390514}
+    - Class: 114
+      Script: {instanceID: 684024}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -552,6 +582,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
@@ -900,7 +934,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerWidget
   - hash:
       serializedVersion: 2
-      Hash: 21b7827f9764115bf6b49b658b6dee23
+      Hash: 1f487f127b6506f83946c1da86aaced1
     assemblyName: Assembly-CSharp.dll
     namespaceName: ButchersGames
     className: SkinsChanger
@@ -1374,7 +1408,7 @@ ScriptsOnlyBuild:
     className: UnityOnCancelMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 56c1013ff4dcc309bf493120e449bc68
+      Hash: 96592d935ebe111bb417dc71250bbff9
     assemblyName: Assembly-CSharp.dll
     namespaceName: ButchersGames
     className: GameSO
@@ -1674,7 +1708,7 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: 0f3a061f0677e137d9ed4d99b4ec1017
+      Hash: a7bb19c387845902810f1370dbee2e04
     assemblyName: Assembly-CSharp.dll
     namespaceName: ButchersGames
     className: ScoreUI
@@ -2236,8 +2270,32 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 3240d1b18cd6fdf03823b0dc0f1dba08
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ButchersGames
+    className: DollarExplosion
+  - hash:
+      serializedVersion: 2
+      Hash: 759c2ef84d159ed7f0c1acb1b80f5747
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ButchersGames
+    className: StarFlashAnim
+  - hash:
+      serializedVersion: 2
+      Hash: 05fa6089ecb537ce9e3d11a9330c04d5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ButchersGames
+    className: BottleExplosion
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ButchersGames
+    className: Destroyer
   platform: 13
   scenePathNames:
   - Assets/Scenes/Lvl1.unity
   - Assets/Scenes/Lvl2.unity
-  playerPath: C:/Users/Danila/Documents/GitHub/Test3DRunner/3D Runner Test/Build/buildtest_3.apk
+  playerPath: C:/Users/Danila/Documents/GitHub/Test3DRunner/3D Runner Test/Build/buildtest_4.apk
