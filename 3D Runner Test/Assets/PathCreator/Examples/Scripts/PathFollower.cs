@@ -9,7 +9,9 @@ namespace PathCreation.Examples
         public PathCreator pathCreator;
         public EndOfPathInstruction endOfPathInstruction;
         public float speed = 5;
-        float distanceTravelled;
+        [SerializeField] float distanceTravelled;
+        [SerializeField] private bool _isGame = false;
+        public bool IsGame { get { return _isGame; } set { _isGame = value; } }
 
         void Start() {
             if (pathCreator != null)
@@ -21,7 +23,7 @@ namespace PathCreation.Examples
 
         void Update()
         {
-            if (pathCreator != null)
+            if (pathCreator != null && _isGame)
             {
                 distanceTravelled += speed * Time.deltaTime;
                 transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction);

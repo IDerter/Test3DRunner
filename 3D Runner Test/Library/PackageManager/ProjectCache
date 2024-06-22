@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638545625983764113
-    m_Hash: 1024416902
+      ticks: 638545936357101682
+    m_Hash: 2537730573
   m_LockFileStatus:
     m_FilePath: C:/Users/Danila/Documents/GitHub/Test3DRunner/3D Runner Test/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638545625983834278
-    m_Hash: 3761641811
+      ticks: 638545936357151534
+    m_Hash: 2451923216
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -22,6 +22,105 @@ m_LocalPackages:
 m_ProjectPath: C:/Users/Danila/Documents/GitHub/Test3DRunner/3D Runner Test/Packages
 m_EditorVersion: 2021.3.14f1 (eee1884e7226)
 m_ResolvedPackages:
+- packageId: com.cysharp.unitask@https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask
+  testable: 0
+  isDirectDependency: 1
+  version: 2.5.4
+  source: 5
+  resolvedPath: C:\Users\Danila\Documents\GitHub\Test3DRunner\3D Runner Test\Library\PackageCache\com.cysharp.unitask@fbe0bf8515
+  assetPath: Packages/com.cysharp.unitask
+  name: com.cysharp.unitask
+  displayName: UniTask
+  author:
+    name: Cysharp, Inc.
+    email: 
+    url: https://cysharp.co.jp/en/
+  category: Task
+  type: 
+  description: Provides an efficient async/await integration to Unity.
+  status: 0
+  errors: []
+  versions:
+    all: []
+    compatible: []
+    verified: 
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - async/await
+  - async
+  - Task
+  - UniTask
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
+- packageId: com.dbrizov.naughtyattributes@https://github.com/dbrizov/NaughtyAttributes.git#upm
+  testable: 0
+  isDirectDependency: 1
+  version: 2.1.4
+  source: 5
+  resolvedPath: C:\Users\Danila\Documents\GitHub\Test3DRunner\3D Runner Test\Library\PackageCache\com.dbrizov.naughtyattributes@8a8fa5a965
+  assetPath: Packages/com.dbrizov.naughtyattributes
+  name: com.dbrizov.naughtyattributes
+  displayName: NaughtyAttributes
+  author:
+    name: Denis Rizov
+    email: 
+    url: https://github.com/dbrizov
+  category: editor extensions
+  type: 
+  description: NaughtyAttributes is an extension for the Unity Inspector.
+  status: 0
+  errors: []
+  versions:
+    all: []
+    compatible: []
+    verified: 
+  dependencies: []
+  resolvedDependencies: []
+  keywords:
+  - attribute
+  - inspector
+  - editor
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 0
+  repository:
+    type: 
+    url: 
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
 - packageId: com.unity.collab-proxy@1.17.6
   testable: 0
   isDirectDependency: 1
